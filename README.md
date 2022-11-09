@@ -52,4 +52,20 @@ The following steps are required to prepare to run the scripts, so they read the
 ## Review the Nationbuilder blog
 At this stage it is not necessary to review every post, but it is useful to decide the earliest date for the posts that are required.
 
-## 
+## Edit the .env file
+This is the only text file that needs to be edited, so that it contains the configrautoin. It contains a number of variables to configure the import to the correct sites.
+
+USER_ID=#########
+USER_PASS=##########
+URL_NEWS_LIST=https://beta.libdems.org.uk/typo3/module/web/NewsAdministration/?id=1454
+NB_NEWS_LIST=https://www.sclibdems.org.uk/news
+CONSOLE_DEBUG=1
+SCREENSHOT_DEBUG=1
+IMAGE_FOLDER=South-Cambs-Nationbuilder
+IMPORT_NOTES=Imported from South Cambs Nationbuilder
+DEFAULT_NB_MEDIA=0
+DEFAULT_NB_MEDIA_URL=https://assets.nationbuilder.com/ldsouthcamb/pages/16/attachments/original/1667854122/South_Cambs_Logo_with_margin_1600x900.png?1667854122
+DEFAULT_NB_MEDIA_ALT=South_Cambs_Logo_with_margin_1600x900.png
+DEFAULT_NB_MEDIA_TITLE=Click to open the news article
+DOMAIN=https://www.sclibdems.org.uk/
+NB_LAST_DATE=2019-01-01

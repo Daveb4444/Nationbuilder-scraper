@@ -55,17 +55,43 @@ At this stage it is not necessary to review every post, but it is useful to deci
 ## Edit the .env file
 This is the only text file that needs to be edited, so that it contains the configrautoin. It contains a number of variables to configure the import to the correct sites.
 
-USER_ID=#########
-USER_PASS=##########
-URL_NEWS_LIST=https://beta.libdems.org.uk/typo3/module/web/NewsAdministration/?id=1454
-NB_NEWS_LIST=https://www.sclibdems.org.uk/news
-CONSOLE_DEBUG=1
-SCREENSHOT_DEBUG=1
-IMAGE_FOLDER=South-Cambs-Nationbuilder
-IMPORT_NOTES=Imported from South Cambs Nationbuilder
-DEFAULT_NB_MEDIA=0
-DEFAULT_NB_MEDIA_URL=https://assets.nationbuilder.com/ldsouthcamb/pages/16/attachments/original/1667854122/South_Cambs_Logo_with_margin_1600x900.png?1667854122
-DEFAULT_NB_MEDIA_ALT=South_Cambs_Logo_with_margin_1600x900.png
-DEFAULT_NB_MEDIA_TITLE=Click to open the news article
-DOMAIN=https://www.sclibdems.org.uk/
-NB_LAST_DATE=2019-01-01
+![image](https://user-images.githubusercontent.com/96742305/200941522-5d77a13f-a3a8-47e5-a580-29ece562e19a.png)
+
+The lines beginning with \# are comments, the variabel names are the ones in capitals.
+
+### USER_ID
+The is the username for editing the Fleet site. It is typically the users Lib Dem meberrship number.
+
+### USER_PASS
+The password for the username entered above. If you share the .env file ewith someone else, make sure this value is deleted.
+
+### URL_NEWS_LIST
+The link to the News Admin folder in Fleet. Select News Admnstation from teh Fleet menu adn select the required folder where the articles should be created. By default there is a folder with the site name in the Datafolder. If there will be several news feeds in the site, additionl subpages can be added to hold the articles. The image below shows the default folder for South Cambridgeshire and two subpages for Pippa Helyings and Cambridgeshire.
+
+![image](https://user-images.githubusercontent.com/96742305/200943381-01196f9d-716a-483e-be6a-47ae98f93c94.png)
+
+### NB_NEWS_LIST
+The link to the home page of the Nationbuilder blog to be scraped.
+
+### CONSOLE_DEBUG
+A flag that can be set to 1 to enable console messages or 0 to disable them.
+
+### SCREENSHOT_DEBUG
+A flag that can be set to 1 to enable screenshots to be taken during the import or 0 to disable them. It is recommended to keep this at 1, setting to 0 can result in images not being linked to the articles.
+
+### IMAGE_FOLDER
+The folder in Fleet where the images will be uploaded. This can be structured in any way required. It is recommended that separate folders are created for the Nationbuilder import. If two or more Nationbuilder blogs are being imported, the folders must have uniques names in Fleet even if they are in differnet parent folders.
+
+![image](https://user-images.githubusercontent.com/96742305/200944330-cad9cf30-d108-4606-8292-6bc1572e69a7.png)
+
+
+![image](https://user-images.githubusercontent.com/96742305/200944018-24d2d729-7fc2-4ab3-ae02-38cfb2d70c1f.png)
+
+### IMPORT_NOTES=Imported from South Cambs Nationbuilder
+### DEFAULT_NB_MEDIA=0
+### DEFAULT_NB_MEDIA_URL
+### DEFAULT_NB_MEDIA_ALT=South_Cambs_Logo_with_margin_1600x900.png
+### DEFAULT_NB_MEDIA_TITLE=Click to open the news article
+### DOMAIN=https://www.sclibdems.org.uk/
+### NB_LAST_DATE
+

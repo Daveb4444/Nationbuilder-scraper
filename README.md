@@ -55,7 +55,7 @@ At this stage it is not necessary to review every post, but it is useful to deci
 ## Edit the .env file
 This is the only text file that needs to be edited, so that it contains the configrautoin. It contains a number of variables to configure the import to the correct sites.
 
-![image](https://user-images.githubusercontent.com/96742305/200941522-5d77a13f-a3a8-47e5-a580-29ece562e19a.png)
+![image](https://user-images.githubusercontent.com/96742305/200948459-06f1e69a-7398-4711-a10f-fd5526a4b7c9.png)
 
 The lines beginning with \# are comments, the variabel names are the ones in capitals.
 
@@ -84,14 +84,21 @@ The folder in Fleet where the images will be uploaded. This can be structured in
 
 ![image](https://user-images.githubusercontent.com/96742305/200944330-cad9cf30-d108-4606-8292-6bc1572e69a7.png)
 
-
-![image](https://user-images.githubusercontent.com/96742305/200944018-24d2d729-7fc2-4ab3-ae02-38cfb2d70c1f.png)
-
 ### IMPORT_NOTES=Imported from South Cambs Nationbuilder
+A text string that will be saved on the Notes tab of each imported article. Useful to see where teh article came from at a future date.
+
 ### DEFAULT_NB_MEDIA=0
+A flag that can be set to 1 to enable a default image to be added if there is no key image in embedded image in the NAtionbuilder post.
+
 ### DEFAULT_NB_MEDIA_URL
+The link to the default image if required. It is recommended to save this in the Files tab of the Nationbuilder blog.
+
 ### DEFAULT_NB_MEDIA_ALT=South_Cambs_Logo_with_margin_1600x900.png
+Alt text is shown if somehting causes the image to fail to display when viewed by a site visitor. Often this is the filename.
+
 ### DEFAULT_NB_MEDIA_TITLE=Click to open the news article
-### DOMAIN=https://www.sclibdems.org.uk/
-### NB_LAST_DATE
+The title will be seen by visitors if they hover over the image in the News page.
+
+### NB_FIRST_DATE
+The date earliest date of posts to scrape. I originally went for just before the 2019 general election, then revised it to the start of the year as there were a few posts that may be worth keeping. They can always be hidden in Fleet if the local party decide.
 

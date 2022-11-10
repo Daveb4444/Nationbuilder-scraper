@@ -200,6 +200,7 @@ async function run() {
               bodytext: importItem.content,
               path_segment: importItem.slug,
               datetime: importItem.date,
+              starttime: importItem.date,
               author: importItem.author,
               notes: importItem.notes
             }            

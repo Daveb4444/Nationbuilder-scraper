@@ -151,19 +151,19 @@ The script performs the following steps.
 
 - Reads all the html code that is part of the blog posts from the blog page - it ignores other content such as the sidebar or social media buttons
 - Loops through each individual post, gathering the required data as follows
--- Checks the date on the post and ignores it if it's older than the value given as NB_FIRST_DATE in the .env file
--- If it is after the date it reads the slug, title, author and before the flip (excerpt)
--- Reads the content continain both before the flip and after the flip
--- Removes the horizontal line placed at the end of the content by Nationbuilder
--- Removes and empty paragraphs - `<p>&nbsp;</p>`
--- If there is a key image it reads the link, title and alt
--- If there is no key image it looks for images embedded in the contnet and saves the data for the first one it finds
--- If there is no key image or embedded image it uses the default image data form the .env file if it is enabled
--- If there are no images or default image it leaveds the image data fiels blank (null)
--- Removes "Read more" from the end of the excerpt
--- Trims the excerpt to one sentence
--- Truncsates the execpt to 150 characters
--- Saves the data
+  - Checks the date on the post and ignores it if it's older than the value given as NB_FIRST_DATE in the .env file
+  - If it is after the date it reads the slug, title, author and before the flip (excerpt)
+  - Reads the content continain both before the flip and after the flip
+  - Removes the horizontal line placed at the end of the content by Nationbuilder
+  - Removes and empty paragraphs - `<p>&nbsp;</p>`
+  - If there is a key image it reads the link, title and alt
+  - If there is no key image it looks for images embedded in the contnet and saves the data for the first one it finds
+  - If there is no key image or embedded image it uses the default image data form the .env file if it is enabled
+  - If there are no images or default image it leaveds the image data fiels blank (null)
+  - Removes "Read more" from the end of the excerpt
+  - Trims the excerpt to one sentence
+  - Truncsates the execpt to 150 characters
+  - Saves the data
 
 From a command line or terminal enter the following command
 

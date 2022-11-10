@@ -47,13 +47,13 @@ Navigate to the project folder created earlier and run the following commands.
 
 # Configuration
 
-The following steps are required to prepare to run the scripts, so they read the correct NAtionbuilder blog and can log in to the correct Fleet site.
+The following steps are required to prepare to run the scripts, so they read the correct Nationbuilder blog and can log in to the correct Fleet site.
 
 ## Review the Nationbuilder blog
-At this stage it is not necessary to review every post, but it is useful to decide the earliest date for the posts that are required.
+Scroll through the blog posts and decide on the earliest date that will be imported, this value will be used in the next step. I originally went for just before the 2019 general election, then revised it to the start of the year as there were a few posts that may be worth keeping. They can always be hidden or deleted in Fleet.
 
 ## Edit the .env file
-This is the only text file that needs to be edited, so that it contains the configrautoin. It contains a number of variables to configure the import to the correct sites.
+This is the only text file that needs to be edited. It contains a number of variables to configure the import to the correct sites.
 
 ![image](https://user-images.githubusercontent.com/96742305/200948459-06f1e69a-7398-4711-a10f-fd5526a4b7c9.png)
 
@@ -100,6 +100,6 @@ Alt text is shown if somehting causes the image to fail to display when viewed b
 The title will be seen by visitors if they hover over the image in the News page.
 
 ### NB_FIRST_DATE
-The date earliest date of posts to scrape. I originally went for just before the 2019 general election, then revised it to the start of the year as there were a few posts that may be worth keeping. They can always be hidden in Fleet if the local party decide.
+The date earliest date of posts to scrape.
 
 ## Nationbuilder custom template

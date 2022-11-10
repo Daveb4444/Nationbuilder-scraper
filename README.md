@@ -111,12 +111,11 @@ The title will be seen by visitors if they hover over the image in the News page
 The date earliest date of posts to scrape.
 
 ## Nationbuilder custom template
-The scraper requires all the posts to be visible on one blog page with no need to select the next page to get more. This requires two changes to be made in Nationbuilder.
+The scraper requires all the posts to be visible on one blog page with no need to select the next page to get more. This requires two changes to be made in Nationbuilder. The changes will only require to be active for a short time and the blog page settings can be returned to their previous values afterwards. The chances of anyone looking at the blog page in this time are very low, most will only be looking at the recent posts on the homme page.
 
 Sign in to Nationbuilder and select Edit for the blog page.
 
 ![image](https://user-images.githubusercontent.com/96742305/201180596-0fe1310e-a52e-42d6-8113-24d85bafb0f1.png)
-
 
 First the blog page needs to be configured to show a large number of posts per page.
 
@@ -125,4 +124,29 @@ First the blog page needs to be configured to show a large number of posts per p
 - Save settings
 - Open the live blog page and check it is now showing a large number - if it isn't try another save
 
-By default the blog page only shows title, authoer, date and anything in Before the flip. It doesn't show the key_image or anything from After the flip. Now the tempalte needs to be changed so that the blog page 
+By default the blog page only shows title, author, date and anything in Before the flip. It doesn't show the key_image or anything from After the flip. To show these a custom template is used template.
+
+![image](https://user-images.githubusercontent.com/96742305/201183945-a41233c9-932c-441d-aa50-d57ed73e0d80.png)
+
+- Select the Template tab
+- If the blog page is not currently using a custom tempalte, clikc on Create a customg template
+- If the page is already using a cusomt tempalte, select the whole code and save it somewhere so it can be restored later
+- Delete the existing code from the template
+- Open the nb_blog_custom_template.html file and copy everything
+- Paste the code into the Nationbuilder editor
+- Click on Save and publish changes
+- REfresh the live page
+
+The blog page should now be showing all the data from before, plus the key_image and After the flip section.
+
+![image](https://user-images.githubusercontent.com/96742305/201184477-1b3dd81f-934a-4a8b-ba0d-03e169501c54.png)
+
+If the key image was also included in the post it will appear twice. This will be resolved during the scraping process.
+
+# Scraping the blog
+
+Now the blog will be scraped and the content saved in a text file in JSON format. Information on JSON can be found on the [W3Schools website](https://www.w3schools.com/whatis/whatis_json.asp).
+
+From a command line or terminal enter the following command
+
+`code` node scrape_nb_blog

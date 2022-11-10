@@ -145,11 +145,26 @@ If the key image was also included in the post it will appear twice. This will b
 
 # Scraping the blog
 
-Now the blog will be scraped and the content saved in a text file in JSON format. Information on JSON can be found on the [W3Schools website](https://www.w3schools.com/whatis/whatis_json.asp).
+Now the blog will be scraped and the content using the scrape_nb_blog script and saved in a text file in JSON format. This typically takes less than one minute for around 100 posts.Information on JSON can be found on the [W3Schools website](https://www.w3schools.com/whatis/whatis_json.asp).
+
+The script performs the following steps.
+
+- Reads all the html code that is part of the blog posts from the blog page - it ignores other content such as the sidebar or social media buttons
+- Loops through each individual post, gathering the required data as follows
+-- Checks the date on the post  and ignores it if it's older than the value given as NB_FIRST_DATE in the .env file
+-- If it is after the date it reads the slug, title, author and before the flip
+-- Reads the content continain both before the flip and after the flip
+-- Remooves the horizontal line placed at the end of the content by Nationbuilder
+-- Removes and empty paragraphs - `<p>&nbsp;</p>`
+-- If there is a key image it reads the link, title and alt
+-- If there is no key image it looks for images embedded in the contnet and saves the data for the first one it finds
+-- If there is no key image or embedded image it uses the default image data form the .env file if it is enabled
+-- If there are no images or default image it leaveds the image data fiels blank (null)
+-- Removes "Read more" from the end of the excerpt
 
 From a command line or terminal enter the following command
 
 `node scrape_nb_blog`
 
-While the script is running it displays a printout of the data that has been scraped and ends with a message saynig Data written to file. The data file can be found in the data folder for your project.
+While the script is running it displays a printout of the data that has been scraped and ends with a message saynig Data written to file. The data file is called import_nb.json and can be found in the data folder for your project.
 

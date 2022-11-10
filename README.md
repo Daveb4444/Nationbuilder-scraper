@@ -208,7 +208,10 @@ The script performs the following functions
   - Creates a new article if it doesn't exist
   - Enters the data for the Header (title), Teaser (excerpt), Text (content), Speaking URL path segment (slug), Date & Time (date), Author Name (author),  Publish Date (date) and Notes (notes)
   - Checks if there is an image
-  - If the image is not already in the named image folder in Fleet, it uplads it
-  - Selectes the image and adds it to the article
+  - If the image is not already in the named image folder in Fleet, it uploads it to Fleet
+  - Selects the image from Fleet and adds it to the article
   - Changes the Show in views dropdown to Show in all views
+  - Takes screenshots form the Puppeteer browser at various steps in the process and saves them locally to the ./screenshots folder
   - Saves the article
+
+While the script is running the output will show a lot of messages. These include `Cannot read properties of undefined (reading 'options')` and `Initializing all date pickers globally has been marked as deprecated. Please pass a specific element.`. Both of these can be ignored.

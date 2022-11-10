@@ -214,4 +214,13 @@ The script performs the following functions
   - Takes screenshots form the Puppeteer browser at various steps in the process and saves them locally to the ./screenshots folder
   - Saves the article
 
-While the script is running the output will show a lot of messages. These include `Cannot read properties of undefined (reading 'options')` and `Initializing all date pickers globally has been marked as deprecated. Please pass a specific element.`. Both of these can be ignored.
+While the script is running the output will show a lot of messages. These include `Cannot read properties of undefined (reading 'options')` and `Initializing all date pickers globally has been marked as deprecated. Please pass a specific element.`. Both of these can be ignored. As long as it shows it is working through the import it is running fine.
+
+`===> Imported article 23
+===> Importing [24 / 37]`
+
+When it has finished
+
+# Restore Nationbuilder settings
+
+

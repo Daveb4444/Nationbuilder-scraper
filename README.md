@@ -172,11 +172,22 @@ To run the script enter the following command from a command line or terminal.
 
 While the script is running it displays a printout of the data that has been scraped and ends with a message saynig Data written to file. The data file is called import_nb.json and can be found in the data folder for your project.
 
-When it has completed, open the import_nb.json file. Each post will start
+When it has completed, open the import_nb.json file. Each post will start somthing like this.
 
     {
-      "slug": "/081221_smallbusiness",
-      "title": "Lib Dem tax cut call on Small Business Saturday",
-      "date": "00:01 4-12-2021",
-      "author": "Sam Oliver",
-      "content": "\n            <p><img src=\"https://d3n8a8pro7vhmx.cloudfront.net/cambridgelibdems/pages/5234/attachments/original/1638993411/key_business.jpg?16
+        "slug": "/joint_administration_agreement",
+        "title": "Lib Dems agree joint administration at Cambridgeshire County Council",
+        "date": "00:01 14-5-2021",
+        "author": "Maya Nakamura",
+        "content": "\n            <p>Liberal Democrat, ...
+ 
+ And will end
+ 
+    _agreement_2021_FINAL.pdf?1620984611\">here</a></p>\n                      ",
+        "featuredImageURL": "https://assets.nationbuilder.com/cambridgelibdems/pages/5179/attachments/original/1620990703/key_county_agreement_signed.JPG?1620990703",
+        "imageTitle": "Lib Dems agree joint administration at Cambridgeshire County Council",
+        "imageAlt": "Lib Dems agree joint administration at Cambridgeshire County Council",
+        "excerpt": "Liberal Democrat, Labour, and Independent Groups on Cambridgeshire County Council have hammered out an agreement for a Joint Administration to run the...",
+        "notes": "Imported from Cambridgeshire Nationbuilder",
+        "mediaName": "key_county_agreement_signed.JPG"
+    }

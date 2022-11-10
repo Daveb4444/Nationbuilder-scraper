@@ -108,7 +108,7 @@ Alt text is shown if somehting causes the image to fail to display when viewed b
 The title will be seen by visitors if they hover over the image in the News page.
 
 ### NB_FIRST_DATE
-The date earliest date of posts to scrape.
+The date earliest date of posts to scrape. It needs to be written in yyyy-mm-dd format, for example 2019-12-12.
 
 ## Nationbuilder custom template
 The scraper requires all the posts to be visible on one blog page with no need to select the next page to get more. This requires two changes to be made in Nationbuilder. The changes will only require to be active for a short time and the blog page settings can be returned to their previous values afterwards. The chances of anyone looking at the blog page in this time are very low, most will only be looking at the recent posts on the homme page.
@@ -153,6 +153,7 @@ The script performs the following steps.
 - Loops through each individual post, gathering the required data as follows
   - Checks the date on the post and ignores it if it's older than the value given as NB_FIRST_DATE in the .env file
   - If it is after the date it reads the slug, title, author and before the flip (excerpt)
+  - - As Nationbuilder doesn't provide the time, it is set to one minute after midnight
   - Reads the content continain both before the flip and after the flip
   - Removes the horizontal line placed at the end of the content by Nationbuilder
   - Removes and empty paragraphs - `<p>&nbsp;</p>`
@@ -162,12 +163,20 @@ The script performs the following steps.
   - If there are no images or default image it leaveds the image data fiels blank (null)
   - Removes "Read more" from the end of the excerpt
   - Trims the excerpt to one sentence
-  - Truncsates the execpt to 150 characters
+  - Truncates the execpt to 150 characters
   - Saves the data
 
-From a command line or terminal enter the following command
+To run the script enter the following command from a command line or terminal.
 
 `node scrape_nb_blog`
 
 While the script is running it displays a printout of the data that has been scraped and ends with a message saynig Data written to file. The data file is called import_nb.json and can be found in the data folder for your project.
 
+When it has completed, open the import_nb.json file. Each post will start
+
+    {
+      "slug": "/081221_smallbusiness",
+      "title": "Lib Dem tax cut call on Small Business Saturday",
+      "date": "00:01 4-12-2021",
+      "author": "Sam Oliver",
+      "content": "\n            <p><img src=\"https://d3n8a8pro7vhmx.cloudfront.net/cambridgelibdems/pages/5234/attachments/original/1638993411/key_business.jpg?16

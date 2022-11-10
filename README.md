@@ -206,5 +206,9 @@ The script performs the following functions
   - Checks if the post has already been saved as an article
   - If the article exists it goes into edit
   - Creates a new article if it doesn't exist
-  - Enters the data for the Header (title), Teaser (excerpt), Text (content), Speaking URL path segment (slug), Date & Time (date), Author Name (author) and Notes (notes)
-  - 
+  - Enters the data for the Header (title), Teaser (excerpt), Text (content), Speaking URL path segment (slug), Date & Time (date), Author Name (author),  Publish Date (date) and Notes (notes)
+  - Checks if there is an image
+  - If the image is not already in the named image folder in Fleet, it uplads it
+  - Selectes the image and adds it to the article
+  - Changes the Show in views dropdown to Show in all views
+  - Saves the article

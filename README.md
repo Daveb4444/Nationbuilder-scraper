@@ -191,3 +191,20 @@ When it has completed, open the import_nb.json file. Each post will start somthi
         "notes": "Imported from Cambridgeshire Nationbuilder",
         "mediaName": "key_county_agreement_signed.JPG"
     }
+
+# Importing to Fleet
+The import to Fleet is done using the import_posts_nb.js script. Depending on the number and size of the images, this can take some time, typically about half a minute per imported post.
+
+The script performs the following functions
+
+- Reads the import_nb.json file created by scrape_nb_blog
+- Creates folders for screenshots, Puppeteer browser cache and Nationbuilder images in the project folder
+- Signs into Fleet
+- Accepts cookies if requested by Fleet
+- Loops through each post in the file performing the folloinwg steps on each
+  - Downloads the iamge and saves it locally to the .\nb_media folder
+  - Checks if the post has already been saved as an article
+  - If the article exists it goes into edit
+  - Creates a new article if it doesn't exist
+  - Enters the data for the Header (title), Teaser (excerpt), Text (content), Speaking URL path segment (slug), Date & Time (date), Author Name (author) and Notes (notes)
+  - 

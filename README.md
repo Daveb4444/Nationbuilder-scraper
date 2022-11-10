@@ -11,6 +11,14 @@ Both scripts are run on a terminal or command line interface and require the use
 
 The files are being shared to allow local parties to import thier Nationbuilder blog posts into Fleet articles. They are not being shared directly to the Fleet Slack channel as users who don't have experience with a command line environment may have difficulties. During the running of the scripts, Typo3 regularly throws errors or bugs outside the control of this script, which may cause concern.
 
+# Definitions
+The following terms are used in this document to refer to page types in NAtionbuilder and Fleet.
+
+- Blog - a page on Nationbuilder showing a list of posts
+- Post - a page on Nationbuilder with a single news story, usually saved as a subpage in a blog
+- News page - any page on Fleet that contains a News system content element to display a list of articles - for example, this could be the home page or a local news page
+- Article - a news item in Fleet that was created in the News administration module
+
 # Setup
 The following sections describe the setting up steps to downolad the scripts, packages and envirnoment files.
 
@@ -103,3 +111,18 @@ The title will be seen by visitors if they hover over the image in the News page
 The date earliest date of posts to scrape.
 
 ## Nationbuilder custom template
+The scraper requires all the posts to be visible on one blog page with no need to select the next page to get more. This requires two changes to be made in Nationbuilder.
+
+Sign in to Nationbuilder and select Edit for the blog page.
+
+![image](https://user-images.githubusercontent.com/96742305/201180596-0fe1310e-a52e-42d6-8113-24d85bafb0f1.png)
+
+
+First the blog page needs to be configured to show a large number of posts per page.
+
+- Select the blog settings tab
+- Change the Number of posts to show at a time setting to a large number such as 100 - it doesn't matter if it's too high
+- Save settings
+- Open the live blog page and check it is now showing a large number - if it isn't try another save
+
+By default the blog page only shows title, authoer, date and anything in Before the flip. It doesn't show the key_image or anything from After the flip. Now the tempalte needs to be changed so that the blog page 

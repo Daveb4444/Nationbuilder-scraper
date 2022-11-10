@@ -149,4 +149,7 @@ Now the blog will be scraped and the content saved in a text file in JSON format
 
 From a command line or terminal enter the following command
 
-`code` node scrape_nb_blog
+`node scrape_nb_blog`
+
+While the script is running it displays a printout of the data that has been scraped and ends with a message saynig Data written to file. The data file can be found in the data folder for your project.
+

@@ -357,7 +357,7 @@ async function run() {
         }
       }      
       close(browser);
-      return resolve(false);      
+      return resolve('\nImport completed\n');      
     } catch (e) {
       return reject(e);
     }

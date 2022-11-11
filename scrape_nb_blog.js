@@ -103,8 +103,8 @@ function run() {
             // NB doesn't give time, so set as one minute after midnight
             let date = new Date( Date.parse( entryDate ) );
             let postTime = date.getTime();
-            // Only scrape posts more recent than nbDate
-            if(postTime > nbDate) {
+            // Only scrape posts on or since nbDate
+            if(postTime >= nbDate) {
               let dateString = "00:01 " + date.getUTCDate() + "-" + (date.getUTCMonth()+1) + "-" + date.getUTCFullYear();
               let slug = item.querySelector('h3 > a').getAttribute('href');
               let title = item.querySelector('h3 > a').textContent.trim();

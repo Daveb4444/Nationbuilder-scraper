@@ -219,8 +219,26 @@ While the script is running the output will show a lot of messages. These includ
 `===> Imported article 23
 ===> Importing [24 / 37]`
 
-When it has finished
+When it has finished it shows Import completed.
+
+`Import completed`
 
 # Restore Nationbuilder settings
 
+Having completed the import, the blog page in NAtionbuilder needs to be restored to the previous settings.
 
+- Sign in to Nationbuilder
+- Select Edit for the blog page
+- Select the blog settings tab
+- Change the Number of posts to show at a time setting to the original value
+- Save settings
+- Select the Template tab
+- If the page was using a cusomt tempalte, select the whole code, delete it, paste the custom code back that was saved previously and then click on Save and publish changes
+- If the page was not using a cusomt template, scroll to the bottom and click on Delete custom template
+- A confirmtion window opens, click on Delete custom template
+- Refresh the live page to verify it is no longer showing the key image or the full content
+
+The blog page should now be showing all the data from before, plus the key_image and After the flip section.
+
+# Post restoration checks
+Looing in the Fleet editor all the imported pages should now be seen in News Administration

@@ -219,8 +219,48 @@ While the script is running the output will show a lot of messages. These includ
 `===> Imported article 23
 ===> Importing [24 / 37]`
 
-When it has finished
+When it has finished it shows Import completed.
+
+`Import completed`
 
 # Restore Nationbuilder settings
 
+Having completed the import, the blog page in NAtionbuilder needs to be restored to the previous settings.
 
+- Sign in to Nationbuilder
+- Select Edit for the blog page
+- Select the blog settings tab
+- Change the Number of posts to show at a time setting to the original value
+- Save settings
+- Select the Template tab
+- If the page was using a cusomt tempalte, select the whole code, delete it, paste the custom code back that was saved previously and then click on Save and publish changes
+- If the page was not using a cusomt template, scroll to the bottom and click on Delete custom template
+- A confirmtion window opens, click on Delete custom template
+- Refresh the live page to verify it is no longer showing the key image or the full content
+
+The blog page should now be showing all the data from before, plus the key_image and After the flip section.
+
+# Post restoration checks
+Looking in the Fleet editor all the imported pages should now be seen in News Administration.
+
+![image](https://user-images.githubusercontent.com/96742305/201426896-c0b4c0d6-caea-4172-9a3e-d3cc3cdf15d9.png)
+
+Similarly Looking in Filelist should show the imported key iamges or the first image from a post if there was no key image.
+
+![image](https://user-images.githubusercontent.com/96742305/201427159-53b9885e-3215-42cd-9e01-85ee2d49dafe.png)
+
+Open the live news page and refresh it to review the articles.
+
+![image](https://user-images.githubusercontent.com/96742305/201427493-fba800cb-aaf4-4c2a-b7f8-f3923b42bf16.png)
+
+If a large number of articles have been imported, there will be buttons at the bottom of the page to navigate to furhter pages.
+
+![image](https://user-images.githubusercontent.com/96742305/201427680-7944c929-1f56-4841-9162-a583ca20ab73.png)
+
+Review how the imported image look in the news page. If they weren't 1200x628 in Nationbuilder, they may have been cropped or resized in Fleet to fit. This cold include cropping heads or text. If needed, go into Fleet and edit them.
+
+![image](https://user-images.githubusercontent.com/96742305/201428498-c7c0856a-53fd-45ab-acce-40b8868ce4c1.png)
+
+Finally ask someone in the campaign/communicaitons tema in the loacl party to review the articles  to check if any are no longer required. They can be either deleted or hiddne in Fleet.
+
+# Re-running the import

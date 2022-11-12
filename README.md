@@ -7,9 +7,9 @@ The import_posts_nb.js file was based on code created by Stuart Lawrence from El
 
 **The import_posts_nb.js script needs to use Fleet login credentials to work**. These details aren't passed back anywhere, but users should be careful when storing/sharing these files.
 
-Both scripts are run on a terminal or command line interface and require the user to make edits to the .env files to match their requirements (see below). The scripts have been successfully used to export a combined total of one hundred blog posts from the South Cambs and Cambridgeshire NB sites and import them to the [South Cambs Fleet site](https://001b000000q0nehaan.fleet.praterraines.co.uk).
+Both scripts are run on a terminal or command line interface and require the user to make edits to the .env files to match their requirements (see below). The scripts have been successfully used to export a combined total of one hundred posts from the South Cambs and Cambridgeshire NB sites and import them to the [South Cambs Fleet site](https://001b000000q0nehaan.fleet.praterraines.co.uk).
 
-The files are being shared to allow local parties to import their Nationbuilder blog posts into Fleet articles. They are not being shared directly to the Fleet Slack channel as it is expected that users will have experience with a command line environment. During the running of the scripts, Typo3 regularly throws errors or bugs outside the control of this script, which may cause concern.
+The files are being shared to allow local parties to import their Nationbuilder blog posts into Fleet articles. They are not being shared directly to the Fleet Slack channel as it is expected that users will have experience with a command line environment. During the running of the scripts, Typo3 regularly throws errors or bugs outside the control of the scripts, which may cause concern.
 
 # Definitions
 The following terms are used in this document to refer to content in Nationbuilder and Fleet.
@@ -29,11 +29,11 @@ The following sections describe the setting up steps required to download the sc
 ## Create a project folder
 This will be used to contain the scripts, the data file created from Nationbuilder and any downloaded images.
 
-Create a folder and download the following content from this repository:
+Create a folder on a local drive and download the following content from this repository:
 
 - .env - contains the environment variables for the Nationbuilder and Fleet sites (see below)
-- import_posts_nb.js - the script to import the NB blog posts into Fleet articles
 - scrape_nb_blog.js - the script that scrapes the data from the Nationbuilder blog
+- import_posts_nb.js - the script to import the NB blog posts into Fleet articles
 - nb_blog_custom_template.html - custom template to use in the Nationbuilder blog while scraping
 - README.md - this document
 - data - a subfolder that will be used to save the import data file
@@ -43,7 +43,7 @@ Create a folder and download the following content from this repository:
 ## Install Node.js and npm
 Node.js and npm are installed from the same file
 - Download the relevant [Node.js installation file](https://nodejs.org/en/download/) for your operating system, choosing the LTS version
-- Run the installer, selecting default options and tick the box to automatically install the necessary tools
+- Run the installation file, selecting default options and tick the box to automatically install the necessary tools
 - After the install completes a window opens to install Python and Visual Studio, as instructed in the window, press any key to continue
 - Press any key when asked to install Chocolatey
 - Another window opens showing the progress of these installations, press ENTER to exit when asked (takes several minutes)
@@ -80,7 +80,7 @@ This is the username for editing the Fleet site. It is typically the user’s Li
 The password for the username entered above. If you share the .env file with someone else, make sure this value is deleted.
 
 ### URL_NEWS_LIST
-The link to the News Admin folder in Fleet. Select News Administration from the Fleet menu and select the required folder where the articles should be created. By default there is a folder with the site name in the Datafolder. If there will be several news feeds in the site, additional subpages can be added to hold the articles. The image below shows the default folder for South Cambridgeshire and two subpages for Pippa Helyings and Cambridgeshire.
+The link to the News Admin folder in Fleet. Select News Administration from the Fleet menu and select the required folder where the articles should be created. By default there is a folder with the site name in the Data folder. If there will be several news feeds in the site, additional subpages can be added to hold the articles. The image below shows the default folder for South Cambridgeshire and two subpages for Pippa Helyings and Cambridgeshire.
 
 ![image](https://user-images.githubusercontent.com/96742305/200943381-01196f9d-716a-483e-be6a-47ae98f93c94.png)
 
@@ -91,10 +91,10 @@ The link to the blog page in Nationbuilder that will be scraped.
 A flag that can be set to 1 to enable console messages or 0 to disable them.
 
 ### SCREENSHOT_DEBUG
-A flag that can be set to 1 to enable screenshots for debug to be taken during the import or 0 to disable them. It is recommended to keep this at 1, setting to 0 can result in images not being linked to the articles.
+A flag that can be set to 1 to enable screenshots for debug to be taken during the import or 0 to disable them. It is recommended to keep this at 1, setting to 0 can result in images not being uploaded to Fleet and linked to the articles.
 
 ### IMAGE_FOLDER
-The folder in Fleet where the images will be uploaded. This can be structured in any way required. It is recommended that separate folders are created for the Nationbuilder import. If two or more Nationbuilder blogs are being imported, the folders must have unique names in Fleet even if they are in different parent folders.
+The folder in Fleet where the images will be uploaded. The folder can be structured in any way required. It is recommended that separate folders are created for the Nationbuilder import. If two or more Nationbuilder blogs are being imported, the folders must have unique names in Fleet even if they are in different parent folders.
 
 ![image](https://user-images.githubusercontent.com/96742305/200944330-cad9cf30-d108-4606-8292-6bc1572e69a7.png)
 
@@ -108,7 +108,7 @@ A flag that can be set to 1 to enable a default image to be added if there is no
 The link to the default image if required. It is recommended to save this in the Files tab of the Nationbuilder blog.
 
 ### DEFAULT_NB_MEDIA_ALT=South_Cambs_Logo_with_margin_1600x900.png
-Alt text is shown if something causes the image to fail to display when viewed by a site visitor. Often this is the filename.
+Alt text is shown on a webpage if something causes the image to fail to display when viewed by a site visitor. Often this is the filename.
 
 ### DEFAULT_NB_MEDIA_TITLE=Click to open the news article
 The title will be seen by visitors if they hover over the image in the News page.
@@ -119,31 +119,31 @@ The earliest date of posts to scrape. It needs to be written in yyyy-mm-dd forma
 ## Nationbuilder custom template
 The scraper requires all the posts to be visible on one blog page with no need to select the next page to get more. This requires two changes to be made in Nationbuilder. The changes will only need to be active for a short time and the blog page settings can be returned to their previous values afterwards. The chances of anyone looking at the blog page in this time are very low, most visitors will only be looking at the recent posts on the home page.
 
-Sign in to Nationbuilder and select Edit for the blog page.
+Sign in to Nationbuilder and select *Edit* for the blog page.
 
 ![image](https://user-images.githubusercontent.com/96742305/201180596-0fe1310e-a52e-42d6-8113-24d85bafb0f1.png)
 
 First the blog needs to be configured to show a large number of posts per page.
 
-- Select the blog settings tab
-- Change the Number of posts to show at a time setting to a large number such as 100 - it doesn't matter if it's too high
+- Select the *Settings* tab for blog
+- Change the *Number of posts to show at a time* setting to a large number such as 100 - it doesn't matter if it's too high
 - Save settings
 - Open the live blog page and check it is now showing a large number - if it isn't try another save
 
-By default the blog page only shows title, author, date and anything in Before the flip. It doesn't show the key_image or anything from After the flip. To show these a custom template is used.
+By default the blog page only shows *title*, *author*, *date* and anything in *Before the flip*. It doesn't show the *key_image* or anything from *After the flip*. To show these a custom template is used.
 
 ![image](https://user-images.githubusercontent.com/96742305/201183945-a41233c9-932c-441d-aa50-d57ed73e0d80.png)
 
-- Select the Template tab
-- If the blog page is not currently using a custom template, click on Create a custom template
+- Select the *Template* tab for the blog
+- If the blog page is not currently using a custom template, click on *Create a custom template*
 - If the page is already using a custom template, select the whole code and save it somewhere so it can be restored later
 - Delete the existing code from the template
 - Open the nb_blog_custom_template.html file and copy everything
 - Paste the code into the Nationbuilder editor
-- Click on Save and publish changes
+- Click on *Save and publish changes*
 - Refresh the live page
 
-The blog page should now be showing all the data from before, plus the key_image and After the flip section.
+The blog page should now be showing all the data from before, plus the *key_image* and *After the flip section*.
 
 ![image](https://user-images.githubusercontent.com/96742305/201184477-1b3dd81f-934a-4a8b-ba0d-03e169501c54.png)
 
@@ -151,7 +151,7 @@ If the key image was also embedded in the post it will appear twice. This will b
 
 # Scraping the blog
 
-Now the blog will be scraped using the scrape_nb_blog script and saved in a text file in JSON format. This typically takes less than one minute for around 100 posts.Information on JSON can be found on the [W3Schools website](https://www.w3schools.com/whatis/whatis_json.asp).
+Now the blog will be scraped using the scrape_nb_blog.js script and saved in a text file in JSON format. This typically takes less than one minute for around 100 posts. Information on JSON can be found on the [W3Schools website](https://www.w3schools.com/whatis/whatis_json.asp).
 
 The script performs the following steps.
 
@@ -159,16 +159,16 @@ The script performs the following steps.
 - Loops through all the posts, gathering the required data from each individual post as follows:
 
   - Checks the date on the post and ignores it if it's earlier than the value given as NB_FIRST_DATE in the .env file
-  - If it is equal to or more recent than the date it reads the slug, title, author and before the flip (excerpt)
+  - If it is equal to or more recent than NB_FIRST_DATE it reads the *slug*, *title* and *author*
   - As Nationbuilder doesn't provide the time, it is set to one minute after midnight
-  - Reads the content both before the flip and after the flip
+  - Reads the content both *before the flip* and *after the flip*
   - Removes the horizontal line placed at the end of the content by Nationbuilder
   - Removes any empty paragraphs - `<p>&nbsp;</p>`
   - If there is a key image it reads the link, title and alt
   - If there is no key image it looks for images embedded in the content and saves the data for the first one it finds
-  - If there is no key image or embedded image it uses the default image data form the .env file if it is enabled
-  - If there are no images or default image it leaves the image data fields blank (null)
-  - Removes "Read more" from the end of the excerpt
+  - If there is no key image or embedded image it uses the default image data from the .env file if it is enabled
+  - If there are no embedded images or default image it leaves the image data fields blank (null)
+  - Removes *Read more* from the end of the excerpt
   - Trims the excerpt to one sentence
   - Truncates the excerpt to 150 characters
   - Saves the data
@@ -215,12 +215,12 @@ The script performs the following functions
   - Checks if the post has already been saved as an article
   - If the article exists it goes into edit mode
   - Creates a new article if it doesn't exist
-  - Enters the data for the Header (title), Teaser (excerpt), Text (content), Speaking URL path segment (slug), Date & Time (date), Author Name (author),  Publish Date (date) and Notes (notes)
+  - Enters the data for the *Header* (title), *Teaser* (excerpt), *Text* (content), S*peaking URL path segment* (slug), *Date & Time* (date), *Author Name* (author),  *Publish Date* (date) and *Notes* (notes)
   - Checks if there is an image
-  - If the image is not already in the named image folder in Fleet, it uploads it to Fleet
+  - If the image is not already in the named image folder, it uploads it to Fleet
   - Selects the image from Fleet and adds it to the article
-  - Changes the Show in views dropdown to Show in all views
-  - Takes screenshots form the Puppeteer browser at various steps in the process and saves them locally to the ./screenshots folder
+  - Changes the *Show in views dropdown* to *Show in all views*
+  - Takes screenshots from the Puppeteer browser at various steps in the process and saves them locally to the ./screenshots folder
   - Saves the article
 
 While the script is running the output will show a lot of messages. These include `Cannot read properties of undefined (reading 'options')` and `Initializing all date pickers globally has been marked as deprecated. Please pass a specific element.`. Both of these can be ignored. As long as it shows it is working its way through the import it is running fine.
@@ -234,20 +234,20 @@ When it has finished it shows Import completed.
 
 # Restore Nationbuilder settings
 
-Having completed the import, the blog in Nationbuilder needs to be restored to the previous settings.
+Having completed the import, the blog in Nationbuilder can be restored to the previous settings.
 
 - Sign in to Nationbuilder
-- Select Edit for the blog page
-- Select the blog settings tab
+- Select *Edit* for the blog page
+- Select *Settings* tab for the blog
 - Change the *Number of posts to show at a time* setting to the original value
 - Save settings
-- Select the Template tab
-- If the page was using a custom template, select the whole code, delete it, paste the custom code back that was saved previously and then click on Save and publish changes
-- If the page was not using a custom template, scroll to the bottom and click on Delete custom template
-- A confirmation window opens, click on Delete custom template
+- Select the *Template* tab
+- If the page was using a custom template, select the whole code, delete it, paste the custom code back that was saved previously and then click on *Save and publish changes*
+- If the page was not using a custom template, scroll to the bottom and click on *Delete custom template*
+- A confirmation window opens, click on *Delete custom template*
 - Refresh the live page to verify it is no longer showing the key image or the full content
 
-The blog page should now be showing all the data from before, plus the key_image and After the flip section.
+The blog page should now be restored to the previous settings.
 
 # Post restoration checks
 Looking in the Fleet editor all the imported pages should now be seen in News Administration.

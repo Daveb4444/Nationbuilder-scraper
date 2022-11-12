@@ -273,9 +273,9 @@ Review how the imported image looks in the news page. If they weren't 1200x628 i
 Finally ask someone else from the campaign/communications team in the local party to review the articles to check if any are no longer required. They can be either deleted or hidden in Fleet.
 
 # Re-running scrape_nb_blog.js
-The script might need to be re-run if several Nationbuilder blog pages need to be scraped and imported. In my case South Cambridgeshire and Cambridgeshire were part of different Nationbuilder nations.
+The script might need to be re-run if different Nationbuilder blog pages need to be scraped and imported. In my case South Cambridgeshire and Cambridgeshire were hosted in different Nationbuilder nations.
 
-If the script is re-run for a different blog it will require the settings to be changed for the .env file and it will overwrite the import_nb.json. It is recommended to copy the existing .en and import_nb.json and save them so they can be used again if required.
+If the script is re-run for a different blog it will require the settings to be changed for the .env file and it will overwrite the import_nb.json. It is recommended to copy the existing .env and import_nb.json, saving them so they can be used again if required.
 
 Make changes to the .env file as required. All settings should be reviewed, but the likely ones to change include the following:
 

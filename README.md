@@ -17,7 +17,7 @@ Users need to be aware of the following limitations:
 - The scripts only import one image per article as this is all that Fleet displays
 - If other images are required that are embedded in Nationbuilder posts, they need to be downloaded manually
 - Depending on the aspect ratio of the imported images, they may be cropped by Fleet
-- The scripts do not asign categories to the articles
+- The scripts do not assign categories to the articles
 
 # Definitions
 The following terms are used in this document to refer to content in Nationbuilder and Fleet.
@@ -99,7 +99,7 @@ The link to the blog page in Nationbuilder that will be scraped.
 A flag that can be set to 1 to enable console messages or 0 to disable them.
 
 ### SCREENSHOT_DEBUG
-A flag that can be set to 1 to enable screenshots for debug to be taken during the import or 0 to disable them. It is recommended to keep this at 1, setting to 0 can result in images not being uploaded to Fleet and linked to the articles.
+A flag that can be set to 1 to enable screenshots for debug to be taken during the import or 0 to disable them. It is recommended to keep this at 1, setting it to 0 can result in images not being uploaded to Fleet and linked to the articles.
 
 ### IMAGE_FOLDER
 The folder in Fleet where the images will be uploaded. The folder can be structured in any way required. It is recommended that separate folders are created for the Nationbuilder import. If two or more Nationbuilder blogs are being imported, the folders must have unique names in Fleet even if they are in different parent folders.
@@ -311,4 +311,4 @@ The screenshots were originally added to the code for debugging purposes, but it
 
 # Comments and feedback
 
-Comments, feedback and improvements welcome. You will find me as Dave Brown on the LibDems Tech Project Slack, Daveb4444 on GitHub).
+Comments, feedback and improvements are welcome. You will find me as Dave Brown on the LibDems Tech Project Slack or Daveb4444 on GitHub).

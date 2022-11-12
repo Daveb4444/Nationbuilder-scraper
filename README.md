@@ -264,3 +264,12 @@ Review how the imported image look in the news page. If they weren't 1200x628 in
 Finally ask someone in the campaign/communicaitons tema in the loacl party to review the articles  to check if any are no longer required. They can be either deleted or hiddne in Fleet.
 
 # Re-running the import
+The import can be re-run if needed, for example the script may be chnaged at some point to add categories. The script checks to see if the existing article and image already exist and edit them instead of creating new content. Note it looks for an article based on its title. If two articles have the same title the script will overwrite the second one.
+
+# Future enhancements
+These are a few updates that may be made to the scripts in future.
+
+## Categories
+As mentioned above, the script doesn't currently set categories. When local categories become available, the script may be modified to enable them to be added to the articles that have been imported.
+
+

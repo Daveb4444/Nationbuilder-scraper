@@ -267,9 +267,10 @@ Finally ask someone in the campaign/communicaitons tema in the loacl party to re
 The import can be re-run if needed, for example the script may be chnaged at some point to add categories. The script checks to see if the existing article and image already exist and edit them instead of creating new content. Note it looks for an article based on its title. If two articles have the same title the script will overwrite the second one.
 
 # Future enhancements
-These are a few updates that may be made to the scripts in future.
+These are updates that may be made to the scripts in future.
 
 ## Categories
 As mentioned above, the script doesn't currently set categories. When local categories become available, the script may be modified to enable them to be added to the articles that have been imported.
 
-
+## Find why the code needs to take screenshots for the image imports to work
+The screenshots were orginally added to the code for debugging purposes, but it has been found the blog images don't all get imported to Fleet if the screenshots are turned off. By leaving the screenshots it adds a small delay between steps during the iamge import, which is enough for it to succeed. IT would be preferable if they could be disabled. If anyone can find the change needed to the code to fix the image import, let me know.

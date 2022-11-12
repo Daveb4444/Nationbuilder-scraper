@@ -3,7 +3,7 @@ The Nationbuilder scraper consists of two Node.js scripts that can be used to sc
 - scrape_nb_blog.js uses Puppeteer to scrape a Nationbuilder blog and save the required data in a JSON file
 - import_posts_nb.js reads the JSON and uses Puppeteer to create articles on a Fleet site, including attaching image media
 
-The import_posts_nb.js file was based on code created by Stuart Lawrence from Elmbridge Lib Dems (developerstuart on GitHub) with minor changes required for the NB import. 
+The import_posts_nb.js file was based on code created by Stuart Lawrence from Elmbridge Lib Dems (Stuart Lawrence on the LibDems Tech Project Slack, developerstuart on GitHub) with minor changes required for the NB import. 
 
 **The import_posts_nb.js script needs to use Fleet login credentials to work**. These details aren't passed back anywhere, but users should be careful when storing/sharing these files.
 
@@ -301,4 +301,6 @@ As mentioned above, the script doesn't currently set categories. When local cate
 ## Finding why the code needs to take screenshots for the image imports to work
 The screenshots were originally added to the code for debugging purposes, but it has been found the blog images don't all get imported to Fleet if the screenshots are turned off. By leaving the screenshots it adds a small delay between steps during the image import, which is enough for it to succeed. It would be preferable if the screenshots could be disabled. If anyone can find the change needed to the code to fix the image import, let me know.
 
+# Comments and feedback
 
+Comments, feedback and improvements welcome. You will find me as Dave Brown on the LibDems Tech Project Slack, Daveb4444 on GitHub).

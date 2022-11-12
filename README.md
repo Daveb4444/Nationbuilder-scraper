@@ -277,7 +277,7 @@ The script might need to be re-run if several Nationbuilder blog pages need to b
 
 If the script is re-run for a different blog it will require the settings to be changed for the .env file and it will overwrite the import_nb.json. It is recommended to copy the existing .en and import_nb.json and save them so they can be used again if required.
 
-Make changes to the .env file as required. They should all be reviewed, but the likely ones to change are likely to include the following:
+Make changes to the .env file as required. All settings should be reviewed, but the likely ones to change include the following:
 
 - USER_PASS - if you are helping another local party or have a second Fleet site
 - URL_NEWS_LIST - if the articles are to be created in a different news folder

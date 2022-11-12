@@ -11,6 +11,14 @@ Both scripts are run on a terminal or command line interface and require the use
 
 The files are being shared to allow local parties to import their Nationbuilder blog posts into Fleet articles. They are not being shared directly to the Fleet Slack channel as it is expected that users will have experience with a command line environment. During the running of the scripts, Typo3 regularly throws errors or bugs outside the control of the scripts, which may cause concern.
 
+# Limitations
+Users need to be aware of the following limitations:
+
+- The scripts only import one image per article as this is all that Fleet displays
+- If other images are required that are embedded in Nationbuilder posts, they need to be downloaded manually
+- Depending on the aspect ratio of the imported images, they may be cropped by Fleet
+- The scripts do not asign categories to the articles
+
 # Definitions
 The following terms are used in this document to refer to content in Nationbuilder and Fleet.
 

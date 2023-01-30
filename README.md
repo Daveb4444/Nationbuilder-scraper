@@ -88,7 +88,7 @@ This is the username for editing the Fleet site. It is typically the user’s Li
 The password for the username entered above. If you share the .env file with someone else, make sure this value is deleted.
 
 ### URL_NEWS_LIST
-The link to the News Admin folder in Fleet. Select News Administration from the Fleet menu and select the required folder where the articles should be created. By default there is a folder with the site name in the Data folder. If there will be several news feeds in the site, additional subpages can be added to hold the articles. The image below shows the default folder for South Cambridgeshire and two subpages for Pippa Helyings and Cambridgeshire.
+The link to the News Admin folder in Fleet. Select News Administration from the Fleet menu and select the required folder where the articles should be created. By default there is a folder with the site name in the Data folder. If there will be several news feeds in the site, additional subpages can be added to hold the articles. The image below shows the default folder for South Cambridgeshire and two subpages for Pippa Heylings and Cambridgeshire.
 
 ![image](https://user-images.githubusercontent.com/96742305/200943381-01196f9d-716a-483e-be6a-47ae98f93c94.png)
 
